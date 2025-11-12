@@ -1,0 +1,61 @@
+<!--
+Monte um pequeno sistema de  notas rápidas que deve ter as seguintes funcionalidades:
+Um campo de texto e um botão “Adicionar”.
+Um botão para marcar a nota como: não urgente ou urgente.
+Cada nota digitada deve aparecer dentro de um box.
+As notas devem ser coladas em formato de lista.  
+Botões para remover nota a nota.
+Um botão “Apagar tudo” remove todas as notas.
+As não urgentes em amarelo limão e as  urgentes em vermelho.
+
+(css)
+Cada nota a ser inserida seguindo padrão de cores: Azul, Verde, Roxo.
+Estilizar todo o conteúdo.
+Hospedar e deixar acessível.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Projeto - Notas Rápidas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/ex00.js"></script>
+</head>
+<body>
+
+   <div class="notas">
+    <h1 class="titulo"><i>NOTAS RÁPIDAS</i></h1>
+
+    <div class="add">
+        <label for="add_nota">Adicione uma nota:</label>
+        <input type="text" name="label" id="add_nota">
+        <p>
+        <label><input type="radio" name="opcao" id="nao_urgente" value="NÃO URGENTE">NÃO URGENTE</label>
+        <label><input type="radio" name="opcao" id="urgente" value="URGENTE">URGENTE</label>
+        <input type="button" id="btn_adicionar" value="ADICIONAR" onclick="adicionar()">
+        </p>
+    </div>
+
+    <div class="NaoUrgente">
+    <h2>Não Urgente</h2>
+    <ol id="boxNaoUrgente"></ol>
+    </div>
+
+    <div class="Urgente">
+    <h2>Urgente</h2>
+    <ol id="boxUrgente"></ol>
+    </div>
+
+    <p>
+        <input type="button" id="btn_remover" value="REMOVER" onclick="remover()">
+    </p>
+
+    <p>
+        <input type="button" id="btn_apagartudo" value="APAGAR TUDO" onclick="apagartudo()">
+    </p>
+
+    </div>
+</body>
+</html>
